@@ -23,8 +23,11 @@ Complete the `Dog` class so that it has:
 At this point, compare your `Cat` and `Dog` classes. Discuss the following with your counselor:
 
 - [ ] Identify which properties are the same.
+// The name and age properties are the same.
 - [ ] Identify which methods are the same.
+// The makeSound() method is the same.
 - [ ] Identify any code that is repeated between the `Cat` and `Dog` classes.
+// The name and age variables.
 
 ---
 
@@ -51,8 +54,11 @@ public class Cat extends Animal {
 Discuss with your counselor:
 
 - [ ] State the keyword used to describe inheritance.
+// extends
 - [ ] Identify the properties and methods that can now be removed from `Cat` and `Dog`.
+// The "this.name = name" and "this.age = age" part of both constructors.
 - [ ] Explain the principle of **DRY (Don't Repeat Yourself)** and how inheritance allows you to achieve it.
+// DRY is the principle of using methods and inheritance to not rewrite the same lines of code over and over. Inheritance helps with this by allowing you to use the same method across multiple classes, instead of having multiple methods in different classes that do the same thing.
 
 ---
 
@@ -77,7 +83,9 @@ This is an example of **polymorphism**.
 Discuss with your counselor:
 
 - [ ] In the context of the above structure, explain the usage of polymorphism and its usefulness.
+// Did this in the doc.
 - [ ] Discuss an example of a larger program for which polymorphism would be useful, and how.
+// In a game, polymorphism can be used to have different enemies use the same attack method from a parent "Enemy" class. This would prevent repeating the same attack method across many classes.
 
 ### 6. Add a `Bird` class
 
@@ -96,7 +104,10 @@ Use a loop to call `makeSound()` on every animal.
 Discuss with your counselor:
 
 - [ ] With your counselor, walk through each cycle of the loop and identify what code is being called on each `Animal` object in the array.
+// On each 'Animal' object in the array, the makeSound() method is being called for each one.
+
 - [ ] Explain how this demonstrates polymorphism.
+// This demonstrates polymorphism by using the makeSound() method from the parent "Animal" class.
 
 ---
 
@@ -121,7 +132,9 @@ Consider how abstraction works together with polymorphism:
 Discuss with your counselor:
 
 - [ ] With reference to the code written, identify the functionality / data being abstracted.
+// The describe method is being abstracted.
 - [ ] Explain how polymorphism relates to abstraction with regard to this example.
+// The describe method is declared in the Animal class, while the Cat and Dog classes dont have it, while the Cat and Dog objects can still call the method. The describe method is abstracted by only being only declared in the Animal, with how it works and it functionality being hidden away.
 
 ---
 
@@ -138,6 +151,7 @@ private String name;
 Try to access `name` and `age` directly from `Cat`.
 
 - [ ] Briefly discuss with your counselor: what happens?
+// You can't access it.
 
 ### 9. Add getters and methods for modifying data
 
@@ -148,5 +162,6 @@ Then add a `public` method that allows the animal's age to be changed.
 Consider:
 
 - [ ] Describe a scenario where you would want `name` and `age` to be `private`.
+// When you are only planning to use those variables within the smae class they are declared in.
 - [ ] Describe a scenario/class where you would want to keep interactions to just methods, and prevent direct modification of member variables.
 - [ ] Explain how the `public` and `private` keywords help enforce **encapsulation**.

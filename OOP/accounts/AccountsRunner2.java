@@ -13,12 +13,15 @@ public class AccountsRunner2 {
         System.out.print("Enter password: "); 
         String password = input.nextLine();
 
-        if (/*Username & password matches user1 */) {
-            // print `Welcome user1!`
-        } else if (/*Username & password matches user2 */) {
-            // print `Welcome user2!`
+        UserAccount user1 = new UserAccount("bob", "strongestPassword123", "Male", 543);
+        UserAccount user2 = new UserAccount("billy", "weakPassword", "Male", 8324);
+
+        if (username.equals(user1.username) && password.equals(user1.password)) {
+            System.out.println("Welcome " + username + "!");
+        } else if (username.equals(user2.username) && password.equals(user2.password)) {
+            System.out.println("Welcome " + user2.username + "!");
         } else {
-            // print invalid username/password
+            System.out.println("Invalid username or password. Please try again.");
         }
 
         input.close(); 

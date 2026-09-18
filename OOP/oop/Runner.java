@@ -23,5 +23,8 @@ public class Runner {
 
         dog.describe();
         cat.describe();
+
+        dog.changeAge(10);
+        System.out.println(dog.getAge());
     }
 }

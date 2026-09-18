@@ -17,12 +17,12 @@ public class Animal {
         return name;
     }
 
-    public String getAge() {
-        return name;
+    public int getAge() {
+        return age;
     }
 
-    public int changeAge(int age) {
-        
+    public int changeAge(int newAge) {
+        age = newAge;
         return age;
     }
 

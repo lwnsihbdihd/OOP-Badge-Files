@@ -164,4 +164,6 @@ Consider:
 - [ ] Describe a scenario where you would want `name` and `age` to be `private`.
 // When you are only planning to use those variables within the smae class they are declared in.
 - [ ] Describe a scenario/class where you would want to keep interactions to just methods, and prevent direct modification of member variables.
+// A bank account class where you only want the user to interact with methods and not the variables directly to keep everything in order.
 - [ ] Explain how the `public` and `private` keywords help enforce **encapsulation**.
+// Public and private can enforce encapsulation by restricting or allowing access to certain things that need to be accessed or need to have restriced access.
